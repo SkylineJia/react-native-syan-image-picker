@@ -35,8 +35,8 @@
     _result = result;
     if (needFetchAssets) {
         [[TZImageManager manager] getAssetsFromFetchResult:result completion:^(NSArray<TZAssetModel *> *models) {
-            self->_models = models;
-            if (self->_selectedModels) {
+            _models = models;
+            if (_selectedModels) {
                 [self checkSelectedModels];
             }
         }];
